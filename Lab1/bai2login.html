@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <style>
+        /* Căn giữa form */
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .text_tx {
+            text-align: right;
+            width: 200px;
+            display: inline-block;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .choice {
+            margin-bottom: 10px;
+        }
+        
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .item {
+            margin-left: 200px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="login">Đăng nhập</h1>
+        <form action="LOGIN">
+            <div class="form-row">
+                <label class="text_tx" for="ten-ho">Tên của tôi:</label>
+                <div>
+                    <input class="choice" type="text" id="ten-ho" name="Tên đăng nhập" size="30" maxlength="30" />
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="Mat_khau">Mật khẩu:</label>
+                <div>
+                    <input class="choice" type="password" id="password" size="30">
+                </div>
+            </div>
+            <div>
+                <input class="item" type="checkbox">
+                <label for="remember password"> Nhớ mật khẩu </label>
+            </div>
+            <div>
+                <button class="item">Đăng nhập</button>
+            </div>
+            <div>
+                <a class="item" href="./bai2.html">Đăng ký tài khoản mới</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

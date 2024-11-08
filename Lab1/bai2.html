@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+        .text_tx {
+            text-align: right;
+            width: 200px;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: violet;
+        }
+        
+        .choice {
+            margin-bottom: 10px;
+        }
+        
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .strength-display {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .strength-indicator {
+            display: flex;
+            margin-left: 10px;
+            flex: 1;
+        }
+        
+        .strength-block {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>1. Hãy cho tôi biết về bản thân bạn</h3>
+        <form action="SUBMIT">
+            <div class="form-row">
+                <label class="text_tx" for="ten-ho">Tên của tôi:</label>
+                <div>
+                    <input class="choice" type="text" id="ten-ho" name="Tên họ" placeholder="Tên họ" size="15" maxlength="30" />
+                    <input type="text" id="ten-goi" name="Tên gọi" placeholder="Tên gọi" size="15" maxlength="30" />
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="gioi-tinh">Giới tính:</label>
+                <div>
+                    <select class="choice" id="gioi-tinh" name="Gioi Tinh">
+                        <option value="chon_muc">- Chọn một mục -</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Nu">Nữ</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="ngay">Ngày Tháng Năm Sinh:</label>
+                <div>
+                    <input class="choice" type="text" id="ngay" name="Ngày" size="6" placeholder="Ngày" maxlength="2" />
+                    <select id="thang" name="tháng">
+                        <option value="chon_thang">- Chọn tháng -</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <input class="choice" type="text" id="nam" name="Năm" size="7" placeholder="Năm" maxlength="4" />
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="nuoc">Tôi sống tại:</label>
+                <div>
+                    <select class="choice" id="nuoc" name="nước">
+                        <option value="Việt Nam">Việt Nam</option>
+                        <option value="Lào">Lào</option>
+                        <option value="Cambodia">Cambodia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="ma-buu-chinh">Mã bưu chính:</label>
+                <div>
+                    <input class="choice" type="text" id="ma-buu-chinh" name="Mã bưu chính" size="20" maxlength="30" />
+                </div>
+            </div>
+        </form>
+        <h3>2. Chọn ID và mật khẩu</h3>
+        <form action="SUBMIT">
+            <div class="form-row">
+                <label class="text_tx" for="yahool">Yahool ID và Email:</label>
+                <div>
+                    <input class="choice" type="text" id="yahool" size="15" maxlength="30" />
+                    <b>@Yahoo.com.vn</b>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="Mat-khau">Mật khẩu:</label>
+                <input class="choice" type="password" id="password">
+                <span id="muc_mk">Mức Độ Mật Khẩu: </span>
+                <div class="strength-indicator">
+                    <div class="strength-block" id="block1"></div>
+                    <div class="strength-block" id="block2"></div>
+                    <div class="strength-block" id="block3"></div>
+                    <div class="strength-block" id="block4"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="Mat_khau">Đánh lại mật khẩu:</label>
+                <div>
+                    <input class="choice" type="password" id="password">
+                </div>
+            </div>
+        </form>
+
+        <h3>3. Để đề phòng trường hợp bạn quên ID hoặc mật khẩu ..</h3>
+        <form action="SUBMIT">
+            <div class="form-row">
+                <label class="text_tx" for="Email">Email Thay Thế Khác:</label>
+                <div>
+                    <input class="choice" type="text" id="yahool" size="30" maxlength="30" />
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx" for="Mat-khau">Câu hỏi bảo mật</label>
+                <div>
+                    <select class="choice" id="cau_hoi" name="cau hoi">
+                            <option value="1">-Chọn một mục-</option>
+                            <option value="2">Bạn có hay sử dụng máy tính không ?</option>
+                            <option value="3">Bạn làm nghề gì</option>
+                        </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="text_tx">Câu trả lời của bạn:</label>
+                <div>
+                    <input class="choice" size="30" maxlength="30" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
